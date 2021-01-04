@@ -59,7 +59,6 @@ object DecodingEvaluator
                 {
                     if( input.substring( 0, it.key.length  ).equals( it.key ) == true )
                     {
-                        hEvalCount.value++
 
                         val remaining = input.substring( it.key.length )
 
@@ -69,7 +68,16 @@ object DecodingEvaluator
                         {
                             //System.out.println("sending ${remaining}")
 
-                            hEvalCount.value += evaluateVariants( remaining )
+                             val returned = evaluateVariants( remaining )
+
+                            if( returned > 0 )
+                            {
+                                hEvalCount.value += returned
+                            }
+                        }
+                        else
+                        {
+                            hEvalCount.value++
                         }
 
                     }

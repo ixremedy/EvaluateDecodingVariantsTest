@@ -9,19 +9,19 @@ class EvaluationTests
     @Test
     public fun test1()
     {
-        assertEquals( 3, DecodingEvaluator.evaluateString( "11" ) )
+        assertEquals( 2, DecodingEvaluator.evaluateString( "11" ) )
     }
 
     @Test
     public fun test2()
     {
-        assertEquals( 6, DecodingEvaluator.evaluateString( "111" ) )
+        assertEquals( 3, DecodingEvaluator.evaluateString( "111" ) )
     }
 
     @Test
     public fun test3()
     {
-        assertEquals( 3, DecodingEvaluator.evaluateString( "13" ) )
+        assertEquals( 2, DecodingEvaluator.evaluateString( "13" ) )
     }
 
     @Test
